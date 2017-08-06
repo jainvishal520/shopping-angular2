@@ -1,16 +1,26 @@
-<label>Server name</label>
-<!--<input type="text" class="form-control" (input)="onUpdateServerName($event)" />-->
-<input type="text" class="form-control" [(ngModel)]="serverName" />
-<p>{{ serverName }}</p>
+<!--<label>Server name</label>-->
+<!--&lt;!&ndash;<input type="text" class="form-control" (input)="onUpdateServerName($event)" />&ndash;&gt;-->
+<!--<input type="text" class="form-control" [(ngModel)]="serverName" />-->
+<!--&lt;!&ndash;<p>{{ serverName }}</p>&ndash;&gt;-->
 
-<button class="btn btn-primary" [disabled]="!addMoreServers" (click)="onCreateServer()" >Add servers</button>
-<!--<p [innerText]="addMoreServers" ></p>-->
-<p>{{ serverCreationStatus }}</p>
-<app-server></app-server>
-<app-server></app-server>
+<!--<button class="btn btn-primary" [disabled]="!addMoreServers" (click)="onCreateServer()" >Add servers</button>-->
+<!--&lt;!&ndash;<p [innerText]="addMoreServers" ></p>&ndash;&gt;-->
+<!--&lt;!&ndash;<p>{{ serverCreationStatus }}</p>&ndash;&gt;-->
+<!--<p *ngIf="serverStatus;else noServer">Server was created, name is {{serverName}}</p>-->
+<!--<ng-template #noServer>-->
+  <!--<p>No server was created</p>-->
+<!--</ng-template>-->
+<!--<app-server *ngFor="let server of servers"></app-server>-->
 
 
-<!--Assignment code for data binding-->
-<input type="text" [(ngModel)]="username">
-<p>{{username}}</p>
-<button [disabled]="username === ''" (click)="username = ''" class="btn btn-primary">Reset username</button>
+<!--&lt;!&ndash;Assignment code for data binding&ndash;&gt;-->
+<!--&lt;!&ndash;<input type="text" [(ngModel)]="username">&ndash;&gt;-->
+<!--&lt;!&ndash;<p>{{username}}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;<button [disabled]="username === ''" (click)="username = ''" class="btn btn-primary">Reset username</button>&ndash;&gt;-->
+
+<button (click)="onDisplaySecret()">Display details</button>
+<p *ngIf="displaySecret">SEcret pasword : Vishal</p>
+
+  <!--<div [ngStyle]="{backgroundColor:ping>5?'blue':'transparent'}" [ngClass]="{white:ping>5}" *ngFor="let ping of clickStats">{{ping}}</div>-->
+<div [ngStyle]="{backgroundColor:i>4?'blue':'transparent'}"
+     [ngClass]="{white:i>4}" *ngFor="let ping of clickStats; let i = index">{{ping}}</div>

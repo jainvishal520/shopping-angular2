@@ -1,1 +1,2 @@
-<h3>{{'Server'}} number {{id}} status is {{get_status()}}</h3>
+<p [ngClass]="{online:status==='online'}" [ngStyle]="{'background-color':get_color()}">{{'Server'}} number {{id}} status is {{get_status()}}</p>
+<!--<p [ngClass]="{online:status==='online'}" [ngStyle]="{backgroundColor:get_color()}">{{'Server'}} number {{id}} status is {{get_status()}}</p>-->
